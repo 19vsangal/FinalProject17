@@ -6,6 +6,9 @@ class Snapchat():
         self.growthpotential = "high"
         self.news = "bad"
 
+#make "leaderboards"
+leaderboard1 = {"chris" : "1", "john" : "2", "patricia" : "3", "susan": "4", "janet":"5"}
+
 snapchat = Snapchat()
 # introduce the game using the print function
 print("Welcome to Money Manager!")
@@ -33,27 +36,31 @@ print("Your first assignment is to analyze this case and advise us what to do.")
 
 #AMZN
 amzn = input("AMZN is about to release their third quarter earnings report in two days. Should we buy more AMZN or sell all of our shares previous to the release? Type 'buy' or 'sell.'")
+while amzn not in ("buy", "sell"):
+    amzn=input("AMZN is about to release their third quarter earnings report in two days. Should we buy more AMZN or sell all of our shares previous to the release? Type 'buy' or 'sell.'")
 if amzn == "buy":
     print("Nice job. AMZN's shares went up 10 percent after the release. We made a lot of money.")
     newline()
 
     #FTR
     ftr = input("FTR just raised their div yield by 20 percent. Their stock has gone up by 20 percent. Should we short or buy? Type 'short' or 'buy'.")
+    while ftr not in ("short", "buy"):
+        ftr=input("FTR just raised their div yield by 20 percent. Their stock has gone up by 20 percent. Should we short or buy? Type 'short' or 'buy'.")
     if ftr == "short":
         print("Nice job. The company couldn't sustain their 33 percent div yield. They dropped it and we made a lot of money.")
         newline()
 
         #BITCOIN
         bit = input("Bitcoin is a highly volatile currency. It just went up 4,000 dollars today. Should we buy tomorrow morning or short it? Type 'buy' or 'short'.")
-        if bit == "buy":
-            print("The currency went down by 2,000 dollars. Our investors panicked and withdrew some of their money. That was an awful decision.")
-            print("You're fired.")
-
+        while bit not in ("buy", "short"):
+            bit=input("Bitcoin is a highly volatile currency. It just went up 4,000 dollars today. Should we buy tomorrow morning or short it? Type 'buy' or 'short'.")
         if bit == "short":
             print("Nice work! The currency went down 2,000 dollars and we made a lot of money by shorting it.")
 
             #ARK COIN
             ark = input("ArkCoin is a new crytocurrency. They have a CEO with a vision. Currently, each Arkcoin is equal to 50 cents. Should we invest in Arkcoin and take the risk or leave it? Type 'leave' or 'invest'.")
+            while ark not in ("leave","invest"):
+                ark = input("ArkCoin is a new crytocurrency. They have a CEO with a vision. Currently, each Arkcoin is equal to 50 cents. Should we invest in Arkcoin and take the risk or leave it? Type 'leave' or 'invest'.")
             if ark == "invest":
                 print("Excellent choice. Arkcoin has gone up to 10 dollars; we've made tons of money. You are promoted to associate.")
                 newline()
@@ -61,14 +68,18 @@ if amzn == "buy":
 
                 #APPLE
                 apple=input("Apple's going to unveil their latest design tomorrow. Should we buy more right now or sell? Type 'buy' or 'sell'.")
+                while apple not in ("buy","sell"):
+                    apple=input("Apple's going to unveil their latest design tomorrow. Should we buy more right now or sell? Type 'buy' or 'sell'.")
                 if apple == "buy":
                     print("Apple's latest design turned off investors. We lost a lot of money from our shares. Bad job.")
 
                     #VERIZON
                     verizon=input("Net neutrality decision is coming out tomorrow. Speculation says it will be repealed. Should we buy or sell now?")
+                    while verizon not in ("buy", "sell"):
+                        verizon=input("Net neutrality decision is coming out tomorrow. Speculation says it will be repealed. Should we buy or sell now?")
                     if verizon == "buy":
                         print("Good job. Investors saw that their profits would rise and the price shot up.")
-
+#MAKE SURE TO COMPLETE THIS ONE
                     if verizon == "sell":
                         print("Verizon's stock shot up and we missed out.")
                         print("You have been demoted to Analyst.")
@@ -86,29 +97,47 @@ if amzn == "buy":
 
                             #TESLA
                             tesla=input("Tesla is coming out with their earnings report for the first quarter of 2018 tomorrow. Buy or short?")
+                            while tesla not in ("buy", "short"):
+                                tesla=input("Tesla is coming out with their earnings report for the first quarter of 2018 tomorrow. Buy or short?")
                             if tesla == "buy":
                                 print("Unfortunately, Tesla came out with an awful report and their stock dipped by more than 20 percent. I'm ashamed of you.")
                                 print("You're fired,", name)
                             if tesla == "short":
                                 print("You're making me a lot of money,", name)
+                                print("You've been promoted to Portfolio Manager. Congratulations.")
+
+                                #Use dictionary to give the user their "ranking"
+                                print("I want to update you on your earnings compared to your fellow colleagues. Remember you want to beat these guys, so you can be up there.")
+                                print("Here are the current rankings. The number one gets picked to be CEO.")
+                                print(leaderboard1.items())
+
 
                 if apple == "sell":
                     print("Never thought I'd say this, but that was the right choice. Apple's stock dipped when investors realized their new design doesn't have wireless charging.")
-                    newline()
 
                     #MCDONALD'S
                     mcdonald=input("ObamaCare will be in effect soon and employers can opt to not provide healthcare to employees if they work less than 40 hours. Should we buy their McDonald's stock for the long run? Type 'yes' or 'no'.")
+                    while mcdonald not in ("yes","no"):
+                        mcdonald=input("ObamaCare will be in effect soon and employers can opt to not provide healthcare to employees if they work less than 40 hours. Should we buy their McDonald's stock for the long run? Type 'yes' or 'no'.")
                     if mcdonald == "yes":
                         print("I'm glad we hired you. Their stock has been slowly rising.")
+                        print("You've been promoted to Portfolio Manager.")
 
                     if mcdonald == "no":
                         print("We missed out on investing on a power stock; it's been rising a lot. But, that's alright.")
+                        newline()
+                        johnson=input("Is Johnson and Johnson a buy? Type 'yes' or 'no'.")
 
             if ark == "leave":
                 print("We trusted your analysis and you let us down. Arkcoin has been booming. But, it's okay. Just take more risks in the future.")
+
     if ftr == "buy":
         print("Not the best decision. After some growth, the company lowered their dividend by 20 percent and their stock went down. We lost money.")
+
+        #NEXT FTR
         nextftr = input("Should we wait for their stock to show some growth again or sell and take our losses? Type 'wait' or 'sell'.")
+        while nextftr not in ("wait", "sell"):
+            nextftr=input("Should we wait for their stock to show some growth again or sell and take our losses? Type 'wait' or 'sell'.")
         if nextftr == "wait":
             print("That was a good decision. Their stock rebounded and we sold for a profit. Not so bad.")
             newline()
@@ -116,11 +145,15 @@ if amzn == "buy":
 
             #BITCOIN2
             bit2 = input("Bitcoin went up by 3,000 dollars today. Should we short it tomorrow or buy it? Type 'short' or 'buy'.")
+            while bit2 not in ("short", "buy"):
+                bit2=input("Bitcoin went up by 3,000 dollars today. Should we short it tomorrow or buy it? Type 'short' or 'buy'.")
             if bit2 == "short":
                 print("Their stock went down. We made some money. Nice job. You are promoted to associate.")
 
                 #VANGUARD ETF
                 vanguard=input("Usually we don't invest in ETF's but our analysts are saying that the Fed is going to lower rates. Should we invest in some Vanguard S&P 500 ETF's or not? Type 'leave' or 'invest'.")
+                while vanguard not in ("leave", "invest"):
+                    vanguard=input("Usually we don't invest in ETF's but our analysts are saying that the Fed is going to lower rates. Should we invest in some Vanguard S&P 500 ETF's or not? Type 'leave' or 'invest'.")
                 if vanguard == "invest":
                     print("Nice job, they lowered rates and the market is booming. S&P is blowing up.")
 
@@ -129,28 +162,33 @@ if amzn == "buy":
                     print("Now, you will be asked to do research and provide the following information to your managers. If your information clashes with the majority of your other associates, you will be fired.")
                     snapchat2=input("How have the past earning reports for Snapchat been? Type 'low' or 'high.'")
                     # if snapchat2 == snapchat.earnings:
+                    while snapchat2 not in ("low", "high"):
+                        snapchat2=input("How have the past earning reports for Snapchat been? Type 'low' or 'high.'")
                     if snapchat2 == 'low':
                         print("Nice job.")
-                        newline()
                         snapchat3=input("How does the growth potential of Snapchat Inc. look? Type 'high' or 'low'.")
+                        while snapchat3 not in ("high", "low"):
+                            snapchat3=input("How does the growth potential of Snapchat Inc. look? Type 'high' or 'low'.")
                         if snapchat3 == "high":
                             print("Nice job, your analysis was correct.")
                             snapchat4=input("How does has recent news been regarding Snapchat Inc.? Type 'good' or 'bad'.")
-
+                            while snapchat4 not in ("good", "bad"):
+                                snapchat4=input("How does has recent news been regarding Snapchat Inc.? Type 'good' or 'bad'.")
                             if snapchat4 == "bad":
                                 print("You're correct. Good job.")
                                 newline()
                                 print("You've been promoted to Portfolio Manager. Congratulations.")
 
+                            #FIRED
                             if snapchat4 == "good":
                                 print("That is wrong. Do your research.")
                                 print("You're fired.")
-
+                        #FIRED
                         if snapchat3 == "low":
                             print("Unfortunately, this is wrong. All analysis and reporting shows the oppposite.")
                             print("You're fired.")
 
-
+                    #FIRED
                     if snapchat2 == 'high':
                     # if snapchat2 != snapchat.earnings:
                         print("This is wrong.")
@@ -178,6 +216,11 @@ if amzn == "buy":
                             print("Bad decision.")
                             newline()
                             print("You're fired.")
+        #FIRED
+        if bit == "buy":
+            print("The currency went down by 2,000 dollars. Our investors panicked and withdrew some of their money. That was an awful decision.")
+            print("You're fired.")
+
             #FIRED
             if bit2 == "buy":
                 print("Their stock went down and we lost a lot of money. You're fired.")
