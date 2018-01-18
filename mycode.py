@@ -1,3 +1,12 @@
+#define Snapchat class
+
+class Snapchat():
+    def _init_(self):
+        self.earnings = "low"
+        self.growthpotential = "high"
+        self.news = "bad"
+
+snapchat = Snapchat()
 # introduce the game using the print function
 print("Welcome to Money Manager!")
 
@@ -69,10 +78,10 @@ if amzn == "buy":
                         from random import randint
                         for x in range(1):
                              print(randint(0,10))
-                        if x < 9:
+                        if x < 5:
                             print("Your decision was bad.")
                             print("You're fired,", name)
-                        if x >= 9:
+                        if x >= 5:
                             print("Good decision.")
 
                             #TESLA
@@ -115,6 +124,39 @@ if amzn == "buy":
                 if vanguard == "invest":
                     print("Nice job, they lowered rates and the market is booming. S&P is blowing up.")
 
+                   #Snapchat questions (not actual investing), leads to promotion or them getting fired.
+
+                    print("Now, you will be asked to do research and provide the following information to your managers. If your information clashes with the majority of your other associates, you will be fired.")
+                    snapchat2=input("How have the past earning reports for Snapchat been? Type 'low' or 'high.'")
+                    # if snapchat2 == snapchat.earnings:
+                    if snapchat2 == 'low':
+                        print("Nice job.")
+                        newline()
+                        snapchat3=input("How does the growth potential of Snapchat Inc. look? Type 'high' or 'low'.")
+                        if snapchat3 == "high":
+                            print("Nice job, your analysis was correct.")
+                            snapchat4=input("How does has recent news been regarding Snapchat Inc.? Type 'good' or 'bad'.")
+
+                            if snapchat4 == "bad":
+                                print("You're correct. Good job.")
+                                newline()
+                                print("You've been promoted to Portfolio Manager. Congratulations.")
+
+                            if snapchat4 == "good":
+                                print("That is wrong. Do your research.")
+                                print("You're fired.")
+
+                        if snapchat3 == "low":
+                            print("Unfortunately, this is wrong. All analysis and reporting shows the oppposite.")
+                            print("You're fired.")
+
+
+                    if snapchat2 == 'high':
+                    # if snapchat2 != snapchat.earnings:
+                        print("This is wrong.")
+                        newline()
+                        print("You're fired.")
+
                 if vanguard == "leave":
                     print("We missed out on a great opportunity. Take risks. Listen to your analysts.")
 
@@ -124,23 +166,25 @@ if amzn == "buy":
                     for u in range(1):
                         print(randint(0,100))
 
-                        if u > 99:
+                        #FIRED
+                        if u > 50:
                             print("Good decision.")
                             print("Unfortunately, your competition has been very good and we need to cut down.")
                             newline()
                             print("You're fired.")
 
-                        if u <= 99:
+                        #FIRED
+                        if u <= 50:
                             print("Bad decision.")
                             newline()
                             print("You're fired.")
-
+            #FIRED
             if bit2 == "buy":
                 print("Their stock went down and we lost a lot of money. You're fired.")
-
+        #FIRED
         if nextftr == "sell":
             print("Awful decision. The stock rebounded. We lost money on this deal. That was your last chance. You're fired.")
 
-#END GAME at beginning
+#END GAME at beginning (FIRED)
 if amzn == "sell":
     print("You got it wrong. We missed out on making a lot of money. You're fired.")
