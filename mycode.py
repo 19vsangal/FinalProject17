@@ -1,5 +1,6 @@
 #define Snapchat class, this will be used in one section of the game where the user has to answer questions
 #their will be checked against the components of this class for accuracy
+#all input functions and if statements asks the user a question and based on their answer, determines whether the user moves on or not
 
 class Snapchat():
     def _init_(self):
@@ -113,8 +114,8 @@ if amzn == "buy":
                             #to use random int function, i first have to import randint from random
                             from random import randint
                            #then, by using for loop and if statements I can make the game provide the user with a result
-                            for x in range(1):
-                                print(randint(0,100))
+                            for b in range(1):
+                                x=randint(0,100)
                                 if x < 90:
                                     print("Unfortunately, your decision lost us a lot of money.")
                                     newline()
@@ -123,6 +124,19 @@ if amzn == "buy":
                                     print(leaderboard1.items())
                                 if x >= 90:
                                     print("Great decision. We made a lot of money. You have been promoted to Portfolio Manager.")
+                                    intel=input("Is Intel a 'buy' or 'sell'?")
+                                    while intel not in ("buy", "sell"):
+                                        intel=input("Is Intel a 'buy' or 'sell'?")
+                                    if intel == "buy":
+                                        print("Good job. Intel went up. We sold and made profit.")
+                                        print(leaderboard4.items())
+                                        print("Above is the rankings of you and your colleagues. Good job.")
+                                        newline()
+                                        print("You are now CEO. Have fun and good luck.")
+
+                                    #FIRED
+                                    if intel == "sell":
+                                        print("You're fired.")
 
                     if verizon == "sell":
                         print("Verizon's stock shot up and we missed out.")
@@ -132,8 +146,8 @@ if amzn == "buy":
                         jc=input("J.C Penney is up quite a bit today; people are excited about it, but it's also really volatile and took losses of up to 30 percent last quarter. Buy or Sell?")
                         #Randomize using the random integer and then using for loops
                         from random import randint
-                        for x in range(1):
-                             print(randint(0,10))
+                        for b in range(1):
+                            x=randint(0,10)
                         if x < 5:
                             print("Your decision was bad.")
                             print("You're fired,", name)
@@ -154,8 +168,19 @@ if amzn == "buy":
                                 #Use dictionary to give the user their "ranking"
                                 print("I want to update you on your earnings compared to your fellow colleagues. Remember you want to beat these guys, so you can be up there.")
                                 print("Here are the current rankings. The number one gets picked to be CEO.")
-                                print(leaderboard1.items())
+                                print(leaderboard3.items())
 
+                                #alibaba
+                                alibaba=input("The current founder of Alibaba announced he is selling of his stock in his company. Do we 'sell' or 'buy'?")
+                                while alibaba not in ("short", "buy"):
+                                    alibaba=input("The current founder of Alibaba announced he is selling of his stock in his company. Do we 'short' or 'buy'?")
+                                if alibaba == "short":
+                                    print("Congraluations. You did well. We made money.")
+                                    newline()
+                                    print(leaderboard4.items())
+                                    print("You are now CEO. Congratulations.")
+                                if alibaba == "buy":
+                                    print("Their stock tanked. How did you not see that? You're bad. Fired.")
 
                 if apple == "sell":
                     print("Never thought I'd say this, but that was the right choice. Apple's stock dipped when investors realized their new design doesn't have wireless charging.")
@@ -167,6 +192,11 @@ if amzn == "buy":
                     if mcdonald == "yes":
                         print("I'm glad we hired you. Their stock has been slowly rising.")
                         print("You've been promoted to Portfolio Manager.")
+                        print("Here are the rankings in terms of you and your colleagues.")
+                        print(leaderboard3.items())
+                        print("Unfortunately, we do not see you progressing with our company any further. But, you can keep your job here.")
+                        newline()
+                        print("The end.")
 
                     if mcdonald == "no":
                         print("We missed out on investing on a power stock; it's been rising a lot. But, that's alright.")
@@ -231,7 +261,35 @@ if amzn == "buy":
                                 print("You're correct. Good job.")
                                 newline()
                                 print("You've been promoted to Portfolio Manager. Congratulations.")
-#FINISH THIS ONE
+                                #DOLLAR TREE
+                                fed=input("The Federal Reserve came out with a report that the economy is experiencing stagnation. Should we 'buy' or 'short' Dollar Tree?")
+                                while fed not in ("short", "buy"):
+                                     fed=input("The Federal Reserve came out with a report that the economy is experiencing stagnation. Should we 'buy' or 'short' Dollar Tree?")
+                                if fed == "buy":
+                                    print("Good job. They had huge earnings.")
+                                    #COSTCO
+                                    costco=input("Should we 'sell' our stocks in Costco or 'buy' more?")
+                                    while costco not in("buy", "short"):
+                                        costco=input("Should we 'sell' our stocks in Costco or 'buy' more?")
+                                    from random import randint
+                                    for f in range(1):
+                                        x=randint(0,10)
+                                    if x >= 5:
+                                        print("Good decision.")
+                                        print("Here are the rankings.")
+                                        print(leaderboard4.items())
+                                        newline()
+                                        print("Congratulations. You are now CEO.")
+                                     #FIRED
+                                    if x < 5:
+                                        print("Your decision was bad.")
+                                        print("You're fired,", name)
+
+                                #FIRED
+                                if fed == "short":
+                                    print("You suck. The stock went up after the earnings report. You're fired.")
+
+
                             #FIRED
                             if snapchat4 == "good":
                                 print("That is wrong. Do your research.")
