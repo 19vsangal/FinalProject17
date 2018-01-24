@@ -7,4 +7,6 @@ While Loops- The following link helped me set up any while loops properly: https
 
 Dictionaries-Helped me set up my dictionary and helped allowing me to print certain things, such as specific items, values, or keys:https://docs.python.org/3/tutorial/datastructures.html
 
+Also, shoutout to Mrs. Gerstein for helping me with any questions I had. 
+
 NOTE TO USER: The game is designed to be challenging and may even seem "unfair" in some circumstances, but that is the point of the game. The stock market is unpredictable, as well. That being said, please don't be discouraged if you can't beat the game on your first, second, or third try. Good luck!
